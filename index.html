@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>facebook</title>
+    <link rel="stylesheet" href="assests/css/style.css">
+    <link rel="icon" type="image/x-icon" href="assests/img/pngwing.com.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!--header-->
+    <header class="fbnav" style="background-color: rgb(255,255,255);">
+        <div class="facebookimage"><a href=""><img style="width: 40px;height: 40px;"
+                    src="data:image/jpeg;base64,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">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+                    alt="">
+            </a></div>
+        <div class="searchbar"><input type="text" class="input" placeholder="Search Facebook"></div>
+
+        <div class="threebar"><svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"
+                class="x19dipnz x1lliihq x1tzjh5l x1k90msu x2h7rmj x1qfuztq" style="--color:var(--secondary-icon)">
+                <path
+                    d="M3.25 2.75a1.25 1.25 0 1 0 0 2.5h17.5a1.25 1.25 0 1 0 0-2.5H3.25zM2 12c0-.69.56-1.25 1.25-1.25h17.5a1.25 1.25 0 1 1 0 2.5H3.25C2.56 13.25 2 12.69 2 12zm0 8c0-.69.56-1.25 1.25-1.25h17.5a1.25 1.25 0 1 1 0 2.5H3.25C2.56 21.25 2 20.69 2 20z">
+                </path>
+            </svg></div>
+
+        <div class="active" id="active">
+            <div class="home"><a href="">
+                    <svg class="active" viewBox="0 0 24 24" width="24" height="24" fill="currentColor"
+                        class="x19dipnz x1lliihq x1tzjh5l x1k90msu x2h7rmj x1qfuztq"
+                        style="--color:var(--primary-button-background)">
+                        <path
+                            d="M9.464 1.286C10.294.803 11.092.5 12 .5c.908 0 1.707.303 2.537.786.795.462 1.7 1.142 2.815 1.977l2.232 1.675c1.391 1.042 2.359 1.766 2.888 2.826.53 1.059.53 2.268.528 4.006v4.3c0 1.355 0 2.471-.119 3.355-.124.928-.396 1.747-1.052 2.403-.657.657-1.476.928-2.404 1.053-.884.119-2 .119-3.354.119H7.93c-1.354 0-2.471 0-3.355-.119-.928-.125-1.747-.396-2.403-1.053-.656-.656-.928-1.475-1.053-2.403C1 18.541 1 17.425 1 16.07v-4.3c0-1.738-.002-2.947.528-4.006.53-1.06 1.497-1.784 2.888-2.826L6.65 3.263c1.114-.835 2.02-1.515 2.815-1.977zM10.5 13A1.5 1.5 0 0 0 9 14.5V21h6v-6.5a1.5 1.5 0 0 0-1.5-1.5h-3z">
+                        </path>
+                    </svg>
+                </a></div>
+        </div>
+
+        <div></div>
+
+        <div>
+            <div class="video">
+                <a href=""><svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"
+                        class="x19dipnz x1lliihq x1tzjh5l x1k90msu x2h7rmj x1qfuztq"
+                        style="--color:var(--secondary-icon)">
+                        <path d="M10.996 8.132A1 1 0 0 0 9.5 9v4a1 1 0 0 0 1.496.868l3.5-2a1 1 0 0 0 0-1.736l-3.5-2z">
+                        </path>
+                        <path
+                            d="M14.573 2H9.427c-1.824 0-3.293 0-4.45.155-1.2.162-2.21.507-3.013 1.31C1.162 4.266.817 5.277.655 6.477.5 7.634.5 9.103.5 10.927v.146c0 1.824 0 3.293.155 4.45.162 1.2.507 2.21 1.31 3.012.802.803 1.813 1.148 3.013 1.31C6.134 20 7.603 20 9.427 20h5.146c1.824 0 3.293 0 4.45-.155 1.2-.162 2.21-.507 3.012-1.31.803-.802 1.148-1.813 1.31-3.013.155-1.156.155-2.625.155-4.449v-.146c0-1.824 0-3.293-.155-4.45-.162-1.2-.507-2.21-1.31-3.013-.802-.802-1.813-1.147-3.013-1.309C17.866 2 16.397 2 14.573 2zM3.38 4.879c.369-.37.887-.61 1.865-.741C6.251 4.002 7.586 4 9.5 4h5c1.914 0 3.249.002 4.256.138.978.131 1.496.372 1.865.74.37.37.61.888.742 1.866.135 1.007.137 2.342.137 4.256 0 1.914-.002 3.249-.137 4.256-.132.978-.373 1.496-.742 1.865-.369.37-.887.61-1.865.742-1.007.135-2.342.137-4.256.137h-5c-1.914 0-3.249-.002-4.256-.137-.978-.132-1.496-.373-1.865-.742-.37-.369-.61-.887-.741-1.865C2.502 14.249 2.5 12.914 2.5 11c0-1.914.002-3.249.138-4.256.131-.978.372-1.496.74-1.865zM8 21.5a1 1 0 1 0 0 2h8a1 1 0 1 0 0-2H8z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+
+        </div>
+
+        <div></div>
+        <div></div>
+        <div>
+            <div class="marketplace">
+                <a href=""> <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"
+                        class="x19dipnz x1lliihq x1tzjh5l x1k90msu x2h7rmj x1qfuztq"
+                        style="--color:var(--secondary-icon)">
+                        <path
+                            d="M1.588 3.227A3.125 3.125 0 0 1 4.58 1h14.84c1.38 0 2.597.905 2.993 2.227l.816 2.719a6.47 6.47 0 0 1 .272 1.854A5.183 5.183 0 0 1 22 11.455v4.615c0 1.355 0 2.471-.119 3.355-.125.928-.396 1.747-1.053 2.403-.656.657-1.475.928-2.403 1.053-.884.12-2 .119-3.354.119H8.929c-1.354 0-2.47 0-3.354-.119-.928-.125-1.747-.396-2.403-1.053-.657-.656-.929-1.475-1.053-2.403-.12-.884-.119-2-.119-3.354V11.5l.001-.045A5.184 5.184 0 0 1 .5 7.8c0-.628.092-1.252.272-1.854l.816-2.719zM10 21h4v-3.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5V21zm6-.002c.918-.005 1.608-.025 2.159-.099.706-.095 1.033-.262 1.255-.485.223-.222.39-.55.485-1.255.099-.735.101-1.716.101-3.159v-3.284a5.195 5.195 0 0 1-1.7.284 5.18 5.18 0 0 1-3.15-1.062A5.18 5.18 0 0 1 12 13a5.18 5.18 0 0 1-3.15-1.062A5.18 5.18 0 0 1 5.7 13a5.2 5.2 0 0 1-1.7-.284V16c0 1.442.002 2.424.1 3.159.096.706.263 1.033.486 1.255.222.223.55.39 1.255.485.551.074 1.24.094 2.159.1V17.5a2.5 2.5 0 0 1 2.5-2.5h3a2.5 2.5 0 0 1 2.5 2.5v3.498zM4.581 3c-.497 0-.935.326-1.078.802l-.815 2.72A4.45 4.45 0 0 0 2.5 7.8a3.2 3.2 0 0 0 5.6 2.117 1 1 0 0 1 1.5 0A3.19 3.19 0 0 0 12 11a3.19 3.19 0 0 0 2.4-1.083 1 1 0 0 1 1.5 0A3.2 3.2 0 0 0 21.5 7.8c0-.434-.063-.865-.188-1.28l-.816-2.72A1.125 1.125 0 0 0 19.42 3H4.58z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div></div>
+        <div></div>
+
+        <div>
+            <div class="group"><a href=""><svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"
+                        class="x19dipnz x1lliihq x1tzjh5l x1k90msu x2h7rmj x1qfuztq"
+                        style="--color:var(--secondary-icon)">
+                        <path
+                            d="M.5 12c0 6.351 5.149 11.5 11.5 11.5S23.5 18.351 23.5 12 18.351.5 12 .5.5 5.649.5 12zm2 0c0-.682.072-1.348.209-1.99a2 2 0 0 1 0 3.98A9.539 9.539 0 0 1 2.5 12zm.84-3.912A9.502 9.502 0 0 1 12 2.5a9.502 9.502 0 0 1 8.66 5.588 4.001 4.001 0 0 0 0 7.824 9.514 9.514 0 0 1-1.755 2.613A5.002 5.002 0 0 0 14 14.5h-4a5.002 5.002 0 0 0-4.905 4.025 9.515 9.515 0 0 1-1.755-2.613 4.001 4.001 0 0 0 0-7.824zM12 5a4 4 0 1 1 0 8 4 4 0 0 1 0-8zm-2 4a2 2 0 1 0 4 0 2 2 0 0 0-4 0zm11.291 1.01a9.538 9.538 0 0 1 0 3.98 2 2 0 0 1 0-3.98zM16.99 20.087A9.455 9.455 0 0 1 12 21.5c-1.83 0-3.54-.517-4.99-1.414a1.004 1.004 0 0 1-.01-.148V19.5a3 3 0 0 1 3-3h4a3 3 0 0 1 3 3v.438a1 1 0 0 1-.01.148z">
+                        </path>
+                    </svg></a></div>
+        </div>
+
+        <div></div>
+        <div></div>
+
+        <div>
+            <div class="games"><a href=""><svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"
+                        class="x19dipnz x1lliihq x1tzjh5l x1k90msu x2h7rmj x1qfuztq"
+                        style="--color:var(--secondary-icon)">
+                        <path
+                            d="M8 8a1 1 0 0 1 1 1v2h2a1 1 0 1 1 0 2H9v2a1 1 0 1 1-2 0v-2H5a1 1 0 1 1 0-2h2V9a1 1 0 0 1 1-1zm8 2a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0zm-2 4a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0z">
+                        </path>
+                        <path
+                            d="M.5 11a7 7 0 0 1 7-7h9a7 7 0 0 1 7 7v2a7 7 0 0 1-7 7h-9a7 7 0 0 1-7-7v-2zm7-5a5 5 0 0 0-5 5v2a5 5 0 0 0 5 5h9a5 5 0 0 0 5-5v-2a5 5 0 0 0-5-5h-9z">
+                        </path>
+                    </svg></div>
+        </div>
+
+        <div class="icon"><a href=""><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"
+                    class="x19dipnz x1lliihq x1tzjh5l x1k90msu x2h7rmj x1qfuztq" style="--color:var(--primary-icon)">
+                    <path
+                        d="M18.5 1A1.5 1.5 0 0 0 17 2.5v3A1.5 1.5 0 0 0 18.5 7h3A1.5 1.5 0 0 0 23 5.5v-3A1.5 1.5 0 0 0 21.5 1h-3zm0 8a1.5 1.5 0 0 0-1.5 1.5v3a1.5 1.5 0 0 0 1.5 1.5h3a1.5 1.5 0 0 0 1.5-1.5v-3A1.5 1.5 0 0 0 21.5 9h-3zm-16 8A1.5 1.5 0 0 0 1 18.5v3A1.5 1.5 0 0 0 2.5 23h3A1.5 1.5 0 0 0 7 21.5v-3A1.5 1.5 0 0 0 5.5 17h-3zm8 0A1.5 1.5 0 0 0 9 18.5v3a1.5 1.5 0 0 0 1.5 1.5h3a1.5 1.5 0 0 0 1.5-1.5v-3a1.5 1.5 0 0 0-1.5-1.5h-3zm8 0a1.5 1.5 0 0 0-1.5 1.5v3a1.5 1.5 0 0 0 1.5 1.5h3a1.5 1.5 0 0 0 1.5-1.5v-3a1.5 1.5 0 0 0-1.5-1.5h-3zm-16-8A1.5 1.5 0 0 0 1 10.5v3A1.5 1.5 0 0 0 2.5 15h3A1.5 1.5 0 0 0 7 13.5v-3A1.5 1.5 0 0 0 5.5 9h-3zm0-8A1.5 1.5 0 0 0 1 2.5v3A1.5 1.5 0 0 0 2.5 7h3A1.5 1.5 0 0 0 7 5.5v-3A1.5 1.5 0 0 0 5.5 1h-3zm8 0A1.5 1.5 0 0 0 9 2.5v3A1.5 1.5 0 0 0 10.5 7h3A1.5 1.5 0 0 0 15 5.5v-3A1.5 1.5 0 0 0 13.5 1h-3zm0 8A1.5 1.5 0 0 0 9 10.5v3a1.5 1.5 0 0 0 1.5 1.5h3a1.5 1.5 0 0 0 1.5-1.5v-3A1.5 1.5 0 0 0 13.5 9h-3z">
+                    </path>
+                </svg></a></div>
+        <div class="messenger"><a href=""><svg viewBox="0 0 12 13" width="20" height="20" fill="currentColor"
+                    class="x19dipnz x1lliihq x1tzjh5l x1k90msu x2h7rmj x1qfuztq" style="--color:var(--primary-icon)">
+                    <g fill-rule="evenodd" transform="translate(-450 -1073)">
+                        <path
+                            d="m459.603 1077.948-1.762 2.851a.89.89 0 0 1-1.302.245l-1.402-1.072a.354.354 0 0 0-.433.001l-1.893 1.465c-.253.196-.583-.112-.414-.386l1.763-2.851a.89.89 0 0 1 1.301-.245l1.402 1.072a.354.354 0 0 0 .434-.001l1.893-1.465c.253-.196.582.112.413.386M456 1073.5c-3.38 0-6 2.476-6 5.82 0 1.75.717 3.26 1.884 4.305.099.087.158.21.162.342l.032 1.067a.48.48 0 0 0 .674.425l1.191-.526a.473.473 0 0 1 .32-.024c.548.151 1.13.231 1.737.231 3.38 0 6-2.476 6-5.82 0-3.344-2.62-5.82-6-5.82">
+                        </path>
+                    </g>
+                </svg></a></div>
+        <div class="notification"><a href=""><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"
+                    class="x19dipnz x1lliihq x1tzjh5l x1k90msu x2h7rmj x1qfuztq" style="--color:var(--primary-icon)">
+                    <path
+                        d="M3 9.5a9 9 0 1 1 18 0v2.927c0 1.69.475 3.345 1.37 4.778a1.5 1.5 0 0 1-1.272 2.295h-4.625a4.5 4.5 0 0 1-8.946 0H2.902a1.5 1.5 0 0 1-1.272-2.295A9.01 9.01 0 0 0 3 12.43V9.5zm6.55 10a2.5 2.5 0 0 0 4.9 0h-4.9z">
+                    </path>
+                </svg></a></div>
+        <div class="profile"><a href=""><img style="border-radius: 50%;"
+                    src="https://scontent.fcok5-1.fna.fbcdn.net/v/t39.30808-6/364797991_324552600001449_5551595909670395324_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_ohc=IQvo--0uGYEQ7kNvgExItKF&_nc_ht=scontent.fcok5-1.fna&oh=00_AYCz8iNePaHwBMBCWbXY-BwADRhQOJuiSGklXqtILhA9nQ&oe=666DCC53"
+                    alt=""></a>
+        </div>
+
+    </header>
+    <!--left bar -->
+    <section>
+        <div class="scroll">
+            <div class="column one" style="padding: 0;margin: 0;margin-top: 50px;position: fixed;top: 10px;">
+                <ul>
+                    <li><a href="" style="color: black;">
+                            <p class="liin"><img style="width: 30px;height: 30px;border-radius: 50%;"
+                                    src="https://scontent.fcok5-1.fna.fbcdn.net/v/t39.30808-6/364797991_324552600001449_5551595909670395324_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_ohc=IQvo--0uGYEQ7kNvgExItKF&_nc_ht=scontent.fcok5-1.fna&oh=00_AYCz8iNePaHwBMBCWbXY-BwADRhQOJuiSGklXqtILhA9nQ&oe=666DCC53"
+                                    alt=""></p>
+                            <p style="display: inline-block;line-height: 2;"></p>
+                            <p class="liout">Abdul Haseeb</p>
+                        </a></li>
+                    <li>
+                        <p class="liin"><img src="assests/img/friends.png" alt=""></p>
+                        <p class="liout">Friends</p>
+                    </li>
+                    <li>
+                        <p class="liin"><img src="assests/img/Screenshot 2024-06-11 191603.png" alt=""></p>
+                        <p class="liout">Memory</p>
+                    </li>
+                    <li>
+                        <p class="liin"><img src="assests/img/saved.png" alt=""></p>
+                        <p class="liout">Saved</p>
+                    </li>
+                    <li>
+                        <p class="liin"><img src="assests/img/group.png" alt=""></p>
+                        <p class="liout">Groups</p>
+                    </li>
+                    <li>
+                        <p class="liin"><img src="assests/img/Screenshot 2024-06-11 193104.png" alt=""></p>
+                        <p class="liout">Video</p>
+                    </li>
+                    <li>
+                        <p class="liin"><img src="assests/img/Screenshot 2024-06-11 191901.png" alt=""></p>
+                        <p class="liout">Marketplace</p>
+                    </li>
+                    <li>
+                        <p class="liin"><img src="assests/img/Feeds.png" alt=""></p>
+                        <p class="liout">Feeds</p>
+                    </li>
+                    <li>
+                        <p class="liin"><img src="assests/img/Events.png" alt=""></p>
+                        <p class="liout">Events</p>
+                    </li>
+                    <li>
+                        <p class="liin"><img src="assests/img/Ads.png" alt=""></p>
+                        <p class="liout">Ads Manager</p>
+                    </li>
+                    <li>
+                        <p class="liin"><img src="assests/img/birthday.png" alt=""></p>
+                        <p class="liout">Birthday</p>
+                    </li>
+                    <li>
+                        <p class="liin"><img src="assests/img/climate.png" alt=""></p>
+                        <p class="liout">Climate Science Center</p>
+                    </li>
+                    <li>
+                        <p class="liin"><img src="assests/img/pay.png" alt=""></p>
+                        <p class="liout">Facebook Pay</p>
+                    </li>
+                    <li>
+                        <p class="liin"><img src="assests/img/fundraisers.png" alt=""></p>
+                        <p class="liout">Fundraisers</p>
+                    </li>
+                    <li>
+                        <p class="liin"><img src="assests/img/games.png" alt=""></p>
+                        <p class="liout">Gaming video</p>
+                    </li>
+                    <li>
+                        <p class="liin"><img src="assests/img/Messenger.png" alt=""></p>
+                        <p class="liout">Messenger</p>
+                    </li>
+                    <li>
+                        <p class="liin"><img src="assests/img/Kids.png" alt=""></p>
+                        <p class="liout">Messenger Kids</p>
+                    </li>
+                    <li>
+                        <p class="liin"><img src="assests/img/pages.png" alt=""></p>
+                        <p class="liout">Pages</p>
+                    </li>
+                    <li>
+                        <p class="liin"><img src="assests/img/games.png" alt=""></p>
+                        <p class="liout">Play games</p>
+                    </li>
+                    <li>
+                        <p class="liin"><img src="assests/img/Recent ad activity.png" alt=""></p>
+                        <p class="liout">Recent and activity</p>
+                    </li>
+
+                    <li class="more">
+                        <p class="liin" style="line-height: 2;"><i class="fa-solid fa-chevron-down"></i></p>
+                        <p class="liout">See More</p>
+                    </li>
+                    <li>
+                        <p class="liin"><img src="assests/img/Recent ad activity.png" alt=""></p>
+                        <p class="liout">Recent and activity</p>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+    </section>
+    <!--right bar-->
+    <section>
+        <div class="column three" style="padding: 0;margin: 0;margin-top: 50px;position: fixed;top: 10px;right: 0px;">
+            <ul>
+                <p class="three-contact">Contacts
+                <p class="fa-solid fa-magnifying-glass"></p>
+                <p class="fa-solid fa-ellipsis"></p>
+                </p>
+                <li><a href="" style="color: black;">
+                        <p class="liin"><img
+                                src="https://scontent.fcok5-1.fna.fbcdn.net/v/t39.30808-6/344569185_241176465252551_6120853359391523577_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_ohc=R3-m4FSJmN4Q7kNvgEl0zGg&_nc_ht=scontent.fcok5-1.fna&oh=00_AYD1Lcb9fLcT8huo6XZluzprhXqLJZcXiWbY2sX7n_SHVQ&oe=666F067C"
+                                class="contact" alt=""></p>
+                        <p style="display: inline-block;line-height: 2;"></p>
+                        <p class="liout">Abdul Rasick</p>
+                    </a></li>
+                <li>
+                    <p class="liin"><img
+                            src="https://scontent.fcok5-1.fna.fbcdn.net/v/t1.6435-9/74610633_1393574007465271_1049067902604410880_n.jpg?stp=dst-jpg_p720x720&_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_ohc=sO4cZ8j_xFgQ7kNvgFROob9&_nc_ht=scontent.fcok5-1.fna&oh=00_AYAkRmYAfNr4DFGrzAoBilBnZaYE9bbHPem6DKUB9EOEjA&oe=6690AD2F"
+                            class="contact" alt=""></p>
+                    <p class="liout">Mujeeb Rahman</p>
+                </li>
+                <li>
+                    <p class="liin"><img
+                            src="https://scontent.fcok5-1.fna.fbcdn.net/v/t39.30808-6/425651672_426475366581256_2088684830308344898_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_ohc=I__Br6VMFvMQ7kNvgHWTDk2&_nc_ht=scontent.fcok5-1.fna&oh=00_AYBLPXiY8OR3k0Abf7pEldhiv0Aea7Yxlyoz6VHs51lkxA&oe=666F0F45"
+                            class="contact" alt=""></p>
+                    <p class="liout">Sree Vishnu</p>
+                </li>
+                <li>
+                    <p class="liin"><img
+                            src="https://scontent.fcok5-1.fna.fbcdn.net/v/t1.6435-9/122894902_371858020719649_8393429453408212684_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_ohc=3NaPj0OlmV8Q7kNvgGfJtxj&_nc_ht=scontent.fcok5-1.fna&oh=00_AYALRfNhR2CfCCaQ8KtuE1SHXfSQ5TOrjHHEAJEPqLvz5A&oe=6690B78F"
+                            class="contact" alt="">
+                    <p class="liout">Mohammed Arshad </p>
+                </li>
+                <li>
+                    <p class="liin"><img
+                            src="https://scontent.fcok5-1.fna.fbcdn.net/v/t39.30808-1/448096427_305238802656192_978578456528553072_n.jpg?stp=dst-jpg_p200x200&_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_ohc=-bUGOFRt5uMQ7kNvgHQ6zyf&_nc_ht=scontent.fcok5-1.fna&oh=00_AYAta2Wm2-W4L4eNwg3-2JUv7WrDykNU1blmGffIyJJXJA&oe=666F111E"
+                            class="contact" alt=""></p>
+                    <p class="liout">J. Adriel </p>
+                </li>
+                <li>
+                    <p class="liin"><img
+                            src="https://scontent.fcok5-1.fna.fbcdn.net/v/t39.30808-6/419358209_7596969336998752_3110383079562779479_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_ohc=FYmHC9GJxGAQ7kNvgG1Atlu&_nc_ht=scontent.fcok5-1.fna&oh=00_AYD9TjQRhSEncGBIZ63V6QOoVqq03TgWpBvey6hhAHohjg&oe=666F1052"
+                            class="contact" alt=""></p>
+                    <p class="liout">Shahul Hameed </p>
+                </li>
+                <li>
+                    <p class="liin"><img
+                            src="https://scontent.fcok5-1.fna.fbcdn.net/v/t1.6435-9/182842275_470237544262799_1674419077230988_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=79aVuSNWgFAQ7kNvgHMI6lA&_nc_ht=scontent.fcok5-1.fna&oh=00_AYA49b0w-BrnZSSfWvxZlNbQNzq7TZjo7OhX_uURgomntQ&oe=6690CF08"
+                            class="contact" alt=""></p>
+                    <p class="liout">Tahir </p>
+                </li>
+                <li>
+                    <p class="liin"><img
+                            src="https://scontent.fcok5-1.fna.fbcdn.net/v/t39.30808-6/363384986_142004482271914_1031706245680504333_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_ohc=MP9eDfGWSiMQ7kNvgF6ngQp&_nc_ht=scontent.fcok5-1.fna&oh=00_AYC6P18EphOmJoqnwo1R99Y5Pt-vTQiPDkzpj6qpzKs6ew&oe=666F2DC4"
+                            class="contact" alt=""></p>
+                    <p class="liout">Ishaaq Hafiz </p>
+                </li>
+                <li>
+                    <p class="liin"><img
+                            src="https://scontent.fcok5-1.fna.fbcdn.net/v/t39.30808-6/447657767_2007446966318597_7333949664455460658_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_ohc=4AMj9vGPA6gQ7kNvgEOnF-s&_nc_ht=scontent.fcok5-1.fna&oh=00_AYBiyCqdkLkYWd5Uq9eN7BtK50mujGH3BS3GmIv9MG96sQ&oe=666F0D8D"
+                            class="contact" alt=""></p>
+                    <p class="liout">Abdul Aziz </p>
+                </li>
+                <li>
+                    <p class="liin"><img
+                            src="https://scontent.fcok5-1.fna.fbcdn.net/v/t39.30808-6/374318283_144941912003211_1029928179885296031_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_ohc=dALxCsjfp_0Q7kNvgEYpKwP&_nc_ht=scontent.fcok5-1.fna&oh=00_AYDec8KDe6N9VHaiONS9H9gKOaWFo08zqxvyzA7sOIGTdw&oe=666F25F7"
+                            class="contact" alt=""></p>
+                    <p class="liout">Farhaan Quraish </p>
+                </li>
+                <li>
+                    <p class="liin"><img
+                            src="https://scontent.fmaa1-1.fna.fbcdn.net/v/t39.30808-1/338723326_1366186384228631_3270224241294326918_n.jpg?stp=dst-jpg_p200x200&_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_ohc=3f_by8T5JsQQ7kNvgGFxffN&_nc_ht=scontent.fmaa1-1.fna&oh=00_AYAHAyLHpPdq7DwWx_qHAzlt6jMyByUsAC1KjHY46P749w&oe=666FA209"
+                            class="contact" alt=""></p>
+                    <p class="liout">Satham </p>
+                </li>
+                <li>
+                    <p class="liin"><img
+                            src="https://scontent.fmaa1-3.fna.fbcdn.net/v/t1.6435-1/118382237_2709201402672076_5384998547940069416_n.jpg?stp=c0.0.200.200a_dst-jpg_p200x200&_nc_cat=101&ccb=1-7&_nc_sid=5f2048&_nc_ohc=Iojt8vfmqvcQ7kNvgHGyU-G&_nc_ht=scontent.fmaa1-3.fna&oh=00_AYCCeMeO4RinevEcZuUr_wrlEVSOYSNsfVVFJC3-PMF7Pw&oe=66912968"
+                            class="contact" alt=""></p>
+                    <p class="liout">Thaufiq Yobz</p>
+                </li>
+                <li>
+                    <p class="liin"><img
+                            src="https://scontent.fmaa1-2.fna.fbcdn.net/v/t39.30808-6/408457341_1052223165976969_1248148925519959304_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_ohc=suNJxh_cbHwQ7kNvgEZbkpX&_nc_ht=scontent.fmaa1-2.fna&oh=00_AYBRJlnINUWv1JjekDmQws72OQ-HtDOIYjeaXuUayAxthA&oe=66746A0C"
+                            class="contact" alt=""></p>
+                    <p class="liout">Sanjai Sanjai </p>
+                </li>
+                <li>
+                    <p class="liin"><img
+                            src="https://scontent.fmaa1-1.fna.fbcdn.net/v/t1.6435-9/82250181_139480534172422_6410097462165372928_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=VSnUlnM6EpgQ7kNvgF7rWPn&_nc_ht=scontent.fmaa1-1.fna&oh=00_AYBvXVep3eyuv8PyeMTlKZDIfTp2dco9bD85JNM6sfy8Pg&oe=66960596"
+                            class="contact" alt=""></p>
+                    <p class="liout">Aadhil Abdul</p>
+                </li>
+                <li>
+                    <p class="liin"><img
+                            src="https://scontent.fmaa1-3.fna.fbcdn.net/v/t39.30808-6/423313595_925204955990733_536659295086020639_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_ohc=7UPBIpG4670Q7kNvgE4L98n&_nc_ht=scontent.fmaa1-3.fna&oh=00_AYAojdYCvMQJmXQNROEk7CPbo7F3hBmOAu5oQejm8GJzIw&oe=66747D5A"
+                            class="contact" alt=""></p>
+                    <p class="liout">Aji Aji </p>
+                </li>
+                <li class="more"><img src="" class="contact" alt="">
+                    <p class="liin" style="line-height: 2;"><img src="" class="contact" alt=""></p>
+                    <p class="liout">See More</p>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </section>
+    <!--Middle bar-->
+    <section>
+        <div class="column two">
+            <div class="card">
+                <div class="card-1 shadow" style="  width: 150px;float: left;">
+                    <div style="overflow: hidden;">
+                        <img src="https://scontent.fmaa1-4.fna.fbcdn.net/v/t39.30808-6/364797991_324552600001449_5551595909670395324_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_ohc=IQvo--0uGYEQ7kNvgGtoc4L&_nc_ht=scontent.fmaa1-4.fna&oh=00_AYCzvmqMzLDac69ZTfvzjfs4xrOGRH3yKstUOANF68GNIA&oe=666F8E53"
+                            alt="">
+                    </div>
+                    <div class="plus-icon">
+                        <div class="fa-solid fa-plus"></div>
+                    </div>
+                    <p
+                        style="text-align: center;margin-top: -30px;padding-bottom: 10px;font-size: 13px;font-weight: 550;color: rgb(83, 83, 83);">
+                        Create Story</p>
+                </div>
+                <div class="card-1 shadow" id="image1" style="  width: 150px;float: left;">
+                    <div style="overflow: hidden;">
+                        <a href="assests/img/arulgino1.png"><img src="assests/img/arulgino1.png" alt=""></a>
+                    </div>
+                    <img id="image1-icon"
+                        src="https://scontent.fmaa1-3.fna.fbcdn.net/v/t39.30808-6/415754964_1344760733068312_684368164452076937_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_ohc=Ixz15WiYCg0Q7kNvgHLmWIO&_nc_ht=scontent.fmaa1-3.fna&oh=00_AYDnjETbjRWeMsv6S_YbTbVrDQebiW74K9tOI68dlmTQSA&oe=6670FF32"
+                        class="contact" alt="" style="width: 40px;
+    height: 40px;border-radius: 50%;">
+                </div>
+                <div class="card-1 shadow" id="image1" style="  width: 150px;">
+                    <div style="overflow: hidden;">
+                        <a href="assests/img/spaceknowledge1.png">
+
+                            <img src="assests/img/spaceknowledge1.png" alt="">
+
+                        </a>
+                    </div>
+                    <img id="image1-icon"
+                        src="https://scontent.fmaa1-2.fna.fbcdn.net/v/t39.30808-6/300069710_442289191249011_4702054498357241002_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_ohc=_LVR9_fd4SMQ7kNvgEc5s1C&_nc_ht=scontent.fmaa1-2.fna&oh=00_AYCBLkpe75SU3CIkChtnbzGOYsVkTU3WtFjhYA6WOKeFLQ&oe=6670DABF"
+                        class="contact" alt="" style="width: 40px;
+height: 40px;border-radius: 50%;">
+                </div>
+                <div class="card-1 shadow" id="image1" style="  width: 150px;">
+                    <div style="overflow: hidden;">
+                        <a href="assests/img/Mabark1.png"> <img src="assests/img/Mabark1.png" alt=""></a>
+
+                    </div>
+                    <img id="image1-icon"
+                        src="https://scontent.fmaa1-2.fna.fbcdn.net/v/t39.30808-6/438256057_465026882551310_1991358223765420238_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_ohc=OITwlq3tnqQQ7kNvgEX02-j&_nc_ht=scontent.fmaa1-2.fna&oh=00_AYDos5Mw_rORVVJAE7UIZr0nv5dRliLStp7IRFNPhr3JwQ&oe=6670EFAE"
+                        class="contact" alt="" style="width: 40px;
+height: 40px;border-radius: 50%;">
+                </div>
+
+
+
+
+
+            </div>
+
+            <div class="story">
+                <div class="plus"><i class="fa-solid fa-plus"></i></div>
+                <div class="plus-para">
+                    <p class="plus-para1">Create Story </p>
+                    <p class="plus-para2">Share a photo or write something</p>
+                </div>
+
+            </div>
+            <div class="mind">
+                <div class="mind-block1">
+                    <div class="mind-profile"><img
+                            src="https://scontent.fcok5-1.fna.fbcdn.net/v/t39.30808-6/364797991_324552600001449_5551595909670395324_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_ohc=IQvo--0uGYEQ7kNvgExItKF&_nc_ht=scontent.fcok5-1.fna&oh=00_AYCz8iNePaHwBMBCWbXY-BwADRhQOJuiSGklXqtILhA9nQ&oe=666DCC53"
+                            alt=""></div>
+                    <div class="mind-input">
+                        <input type="text" placeholder="What's on you mind Abdul?">
+                    </div>
+                </div>
+                <div class="mind-block2">
+                    <div class="mind-live">
+                        <p><img src="assests/img/live_video.png" alt="">Live video</p>
+                    </div>
+                    <div class="mind-photo">
+
+                        <p><img src="assests/img/image_photos.png" alt="">Photo/video</p>
+                    </div>
+                    <div class="mind-activity">
+
+                        <p><img src="assests/img/activity.png" alt="">Feeling/activity</p>
+                    </div>
+                </div>
+            </div>
+            <div class="post1">
+                <div class="post1-block1">
+                    <div class="post1-profile"><img
+                            src="https://scontent.fcok5-1.fna.fbcdn.net/v/t39.30808-6/441519978_850744523736981_4850020890514318701_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=5f2048&_nc_ohc=_6X7DxWGZMwQ7kNvgFrJ7r_&_nc_ht=scontent.fcok5-1.fna&oh=00_AYAj6n0OMXiQmJC17HAqmkVtsAqSABfep8IUAV41LcYCMg&oe=666F653C"
+                            alt=""></div>
+                    <div class="post1-topic">
+                        <p style="margin-top: 10px;"><span style="font-size: 1vw;">Colachel Today/குளச்சல் டுடே
+                            </span><br><span style="font-size: 0.8vw;">52m<i
+                                    class="fa-solid fa-earth-americas"></i></span></p>
+                        <p class="para2"><i class="fa-solid fa-ellipsis" style="margin-left: 80%;"></i></p>
+                        <p class="para3"><i class="fa-solid fa-xmark"></i></p>
+                    </div>
+                </div>
+                <div class="post1-block2">
+                    <p>கன்னியாகுமரி மாவட்ட காவல் கண்காணிப்பாளர் திரு.E.சுந்தரவதனம் இ.கா.ப அவர்கள் தலைமையில் மாவட்ட காவல்
+                        அலுவலகத்தில் வைத்து குழந்தை தொழிலாளர் முறையினை அகற்றுவதற்கான உறுதிமொழி ஏற்க்கப்பட்டது.</p>
+                </div>
+                <div class="post1-block3">
+                    <p><img src="https://scontent.fcok5-1.fna.fbcdn.net/v/t39.30808-6/448048904_872557318222368_2847966133241683738_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_ohc=fZwgYmQhKVEQ7kNvgGURBs0&_nc_ht=scontent.fcok5-1.fna&oh=00_AYBc2nfPG8qLupdxo7alOpYe9VvmyBpbtR8qx2CKpR7dIQ&oe=666F6CAC"
+                            alt="" style="display: block;width: 100%;"></p>
+
+                </div>
+                <div class="post-block4">
+                    <div class="post-like">
+                        <p><i class="fa-regular fa-thumbs-up"></i> Like</p>
+                    </div>
+                    <div class="post-comment">
+
+                        <p><i class="fa-regular fa-comment"></i> Comment</p>
+                    </div>
+                    <div class="post-send">
+
+                        <p><i class="fa-brands fa-whatsapp"></i> Whatsapp</p>
+                    </div>
+                    <div class="post-share">
+
+                        <p><i class="fa-solid fa-share"></i></i> Share</p>
+                    </div>
+                </div>
+            </div>
+            <div class="post1">
+                <div class="post1-block1">
+                    <div class="post1-profile"><img
+                            src="https://scontent.fcok5-1.fna.fbcdn.net/v/t39.30808-6/385436600_263921286616944_6574959205255801615_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=5f2048&_nc_ohc=5aZmJbquUpEQ7kNvgEUNIZm&_nc_ht=scontent.fcok5-1.fna&oh=00_AYByvC16N1C7kifCtK2Ze75LiBkKTo32JgQKGdbBsg5CAQ&oe=666F83B7"
+                            alt=""></div>
+                    <div class="post1-topic">
+                        <p style="margin-top: 10px;"><span style="font-size: 1vw;">Discovering Archaeology
+                            </span><br><span style="font-size: 0.8vw;">8 hours ago <i
+                                    class="fa-solid fa-earth-americas"></i></span></p>
+                        <p class="para2"><i class="fa-solid fa-ellipsis" style="margin-left: 80%;"></i></p>
+                        <p class="para3"><i class="fa-solid fa-xmark"></i></p>
+                    </div>
+                </div>
+                <div class="post1-block2">
+                    <p>"Unearthing the Ancient 'City of Giants' in Ethiopia: A Potential Rewrite of Human History.
+                        -Details below in the comments section ...👇👇<br>
+                        <a href="#">#Ancient #Archaeology #Mystery #AncientSacrifices</a>
+                    </p>
+                </div>
+                <div class="post1-block3">
+                    <p><img src="https://scontent.fcok5-1.fna.fbcdn.net/v/t39.30808-6/448338055_420786007597137_2647642949897631701_n.jpg?stp=dst-jpg_p526x296&_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=xRbg0oPRLQsQ7kNvgGCtxHZ&_nc_ht=scontent.fcok5-1.fna&oh=00_AYBG3Xdm98QjK4sic8MV-T69Sw7DOUPSj_BnB0AfbfBjVg&oe=666F7C5A"
+                            alt="" style="display: block;width: 100%;"></p>
+
+                </div>
+                <div class="post-block4">
+                    <div class="post-like">
+                        <p><i class="fa-regular fa-thumbs-up"></i> Like</p>
+                    </div>
+                    <div class="post-comment">
+
+                        <p><i class="fa-regular fa-comment"></i> Comment</p>
+                    </div>
+                    <div class="post-send">
+
+                        <p><i class="fa-brands fa-whatsapp"></i> Whatsapp</p>
+                    </div>
+                    <div class="post-share">
+
+                        <p><i class="fa-solid fa-share"></i></i> Share</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="post1">
+                <div class="post1-block1">
+                    <div class="post1-profile"><img
+                            src="https://yt3.googleusercontent.com/ytc/AIdro_kkZfvzimOQmo1Sdp_0pU5prKOfGUKdrgfsbkRNPTUygXpK=s176-c-k-c0x00ffffff-no-rj"
+                            alt=""></div>
+                    <div class="post1-topic">
+                        <p style="margin-top: 10px;"><span style="font-size: 1vw;">The Economic Times </span><br><span
+                                style="font-size: 0.8vw;">9 hours ago <i class="fa-solid fa-earth-americas"></i></span>
+                        </p>
+                        <p class="para2"><i class="fa-solid fa-ellipsis" style="margin-left: 80%;"></i></p>
+                        <p class="para3"><i class="fa-solid fa-xmark"></i></p>
+                    </div>
+                </div>
+                <div class="post1-block2">
+                    <p>Kuwait building fire: 40 Indians killed, several injured; Indian Embassy releases helpline
+                        number<br>
+
+                </div>
+                <div class="post1-block3">
+                    <p><iframe width="100%" height="315"
+                            src="https://www.youtube.com/embed/PhTHOx4rECM?si=uSJqw2-5j2uKSzG9"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+
+                </div>
+                <div class="post-block4">
+                    <div class="post-like">
+                        <p><i class="fa-regular fa-thumbs-up"></i> Like</p>
+                    </div>
+                    <div class="post-comment">
+
+                        <p><i class="fa-regular fa-comment"></i> Comment</p>
+                    </div>
+                    <div class="post-send">
+
+                        <p><i class="fa-brands fa-whatsapp"></i> Whatsapp</p>
+                    </div>
+                    <div class="post-share">
+
+                        <p><i class="fa-solid fa-share"></i></i> Share</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!--dummy-->
+
+            <div class="post1">
+                <div class="post1-block1">
+                    <div class="post1-profile"><img
+                            src="https://yt3.googleusercontent.com/CDiMODBTtP-gp5EJFnjwaPwioYhkPw0HLsghWllsP0BprNtQAhK0b6FqGelMasNLvVUTdWZSeg=s176-c-k-c0x00ffffff-no-rj"
+                            alt=""></div>
+                    <div class="post1-topic">
+                        <p style="margin-top: 10px;"><span style="font-size: 1vw;">Mr. GK</span><br><span
+                                style="font-size: 0.8vw;">16 hours ago <i class="fa-solid fa-earth-americas"></i></span>
+                        </p>
+                        <p class="para2"><i class="fa-solid fa-ellipsis" style="margin-left: 80%;"></i></p>
+                        <p class="para3"><i class="fa-solid fa-xmark"></i></p>
+                    </div>
+                </div>
+                <div class="post1-block2">
+                    <p>நீயா நானாவில் உண்மையில் நடந்தது என்ன? | Neeya Naana Ghost Episode | Mr.GK<br>
+
+                </div>
+                <div class="post1-block3">
+                    <p><iframe width="100%" height="315"
+                            src="https://www.youtube.com/embed/LSSFDF-0k9s?si=OU7jwXCkIrM2MbIV"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+
+                </div>
+                <div class="post-block4">
+                    <div class="post-like">
+                        <p><i class="fa-regular fa-thumbs-up"></i> Like</p>
+                    </div>
+                    <div class="post-comment">
+
+                        <p><i class="fa-regular fa-comment"></i> Comment</p>
+                    </div>
+                    <div class="post-send">
+
+                        <p><i class="fa-brands fa-whatsapp"></i> Whatsapp</p>
+                    </div>
+                    <div class="post-share">
+
+                        <p><i class="fa-solid fa-share"></i></i> Share</p>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+
+            <div class="post1">
+                <div class="post1-block1">
+                    <div class="post1-profile"><img
+                            src="https://scontent.fcok5-1.fna.fbcdn.net/v/t39.30808-6/441519978_850744523736981_4850020890514318701_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=5f2048&_nc_ohc=_6X7DxWGZMwQ7kNvgFrJ7r_&_nc_ht=scontent.fcok5-1.fna&oh=00_AYAj6n0OMXiQmJC17HAqmkVtsAqSABfep8IUAV41LcYCMg&oe=666F653C"
+                            alt=""></div>
+                    <div class="post1-topic">
+                        <p style="margin-top: 10px;"><span style="font-size: 1vw;">Colachel Today/குளச்சல் டுடே is at <a
+                                    href="" id="colacheltoday">Mathur Thottipalam.</a> </span><br><span
+                                style="font-size: 0.8vw;">52m<i class="fa-solid fa-earth-americas"></i></span></p>
+                        <p class="para2"><i class="fa-solid fa-ellipsis" style="margin-left: 80%;"></i></p>
+                        <p class="para3"><i class="fa-solid fa-xmark"></i></p>
+                    </div>
+                </div>
+                <div class="post1-block2">
+
+                </div>
+                <div class="post1-block3" id="colacheltodaybackground">
+                    <p style="height: 100%;margin: 0;padding: 0;"><img
+                            src="https://scontent.fmaa1-4.fna.fbcdn.net/v/t39.30808-6/448315397_874516688026431_5535691904264427222_n.jpg?stp=dst-jpg_s640x640&_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_ohc=u79FapHaceEQ7kNvgHHwYpP&_nc_ht=scontent.fmaa1-4.fna&oh=00_AYC7hu13fwQmFxF2oMZVdRSAw0A40hbh0vyZQNgndJXMiQ&oe=66735899"
+                            alt="" style="display: block;width: 70%; margin: auto;height: 100%;"></p>
+
+                </div>
+                <div class="post-block4">
+                    <div class="post-like">
+                        <p><i class="fa-regular fa-thumbs-up"></i> Like</p>
+                    </div>
+                    <div class="post-comment">
+
+                        <p><i class="fa-regular fa-comment"></i> Comment</p>
+                    </div>
+                    <div class="post-send">
+
+                        <p><i class="fa-brands fa-whatsapp"></i> Whatsapp</p>
+                    </div>
+                    <div class="post-share">
+
+                        <p><i class="fa-solid fa-share"></i></i> Share</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--loader-->
+            <div class="container">
+                <div class="box" style="margin-left: -30px;">
+                    <div class="spinner"></div>
+                    <p id="para" style="margin-left: 15%;padding: 5px;color: grey;"> Loading</p>
+                </div>
+            </div>
+
+            <div style="height: 30px;">
+
+            </div>
+        </div>
+
+    </section>
+
+
+</body>
+
+</html>
